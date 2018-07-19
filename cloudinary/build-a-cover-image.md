@@ -4,23 +4,20 @@ description: By Dan Zeitman and Miki Shiran
 
 # Build a Cover Image
 
-In this example we'll take a performance image and create a cover image. Here we have the amazing Jazz artist, Wayne Shorter - image copyright and courtesy of Capitol Music Group.
+In this example we'll take a performance image and create a cover image. Here we have the amazing  artist, Wiz Khalifa - image copyright and courtesy of Ardentes Music Festival.
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/w_400/v1526606182/wayne-shorter/speak-no-evil/WSHORW12.jpg)
+![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_300/v1530016018/wallifornia/wiz-khalifa.png)
 
 Beautifully cropped square image, but to make it a cover image we need the image to fit into a 16:9 aspect ratio. We will need to pad the image to make up the image fit into the new aspect ratio. First step is to example the direction the performer's eyes are gazing. Wayne is looking to the left so let's add lead space and pad the image to the left.
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/ar_16:9,c_lpad,g_east/w_600/v1526606182/wayne-shorter/speak-no-evil/WSHORW12.jpg)
+![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_600,ar_16:9,c_lpad,g_west/v1530016018/wallifornia/wiz-khalifa.jpg)
+
+`http://res.cloudinary.com/tamas-demo/image/upload/ar_16:9,c_lpad,g_west/v1530016018/wallifornia/wiz-khalifa.jpg`
+
+We added aspect ratio of 16:9, cropping of lpad and gravity west to create the image and move it to the right. This done simply by adding the params into the url as follows:
 
 ```text
-http://res.cloudinary.com/capitol-music-group/image/upload/
-ar_16:9,c_lpad,g_east/v1526606182/wayne-shorter/speak-no-evil/WSHORW12.jpg
-```
-
-We added aspect ratio of 16:9, cropping of lpad and gravity east to create the image and move it to the right. This done simply by adding the params into the url as follows:
-
-```text
-ar_16:9,c_lpad,g_east
+ar_16:9,c_lpad,g_west
 ```
 
 Nice but would it be better if the background color matched the exact same color as the backgound in our original? Easy! Just add background auto to our url:
@@ -29,16 +26,13 @@ Nice but would it be better if the background color matched the exact same color
 b_auto
 ```
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/ar_16:9,b_auto,c_lpad,g_east/w_600/v1526606182/wayne-shorter/speak-no-evil/WSHORW12.jpg)
+![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_600,ar_16:9,c_lpad,g_west,b_auto/v1530016018/wallifornia/wiz-khalifa.jpg)
 
-```text
-http://res.cloudinary.com/capitol-music-group/image/upload/
-ar_16:9,b_auto,c_lpad,g_east/v1526606182/wayne-shorter/speak-no-evil/WSHORW12.jpg
-```
+`http://res.cloudinary.com/tamas-demo/image/upload/ar_16:9,c_lpad,g_west,b_auto/v1530016018/wallifornia/wiz-khalifa.jpg`
 
-Looking good! Now lets optimize this for performance and quality.
+Looking good! Now let's optimize this for performance and quality.
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/ar_16:9,b_auto,c_lpad,dpr_auto,f_auto,g_east,q_auto:best/w_600/v1526606182/wayne-shorter/speak-no-evil/WSHORW12%20)
+![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_600,ar_16:9,c_lpad,g_west,b_auto,dpr_auto,f_auto,q_auto:best/v1530016018/wallifornia/wiz-khalifa.jpg)
 
 We can optimize the dpi, format, and quality with a few additional params in our url:
 
@@ -48,84 +42,50 @@ dpr_auto,f_auto,q_auto:best
 
 The addition of these params will improve performance and delivery of the final image tremendously, In general you should always use them.
 
-```text
-http://res.cloudinary.com/capitol-music-group/image/upload/
-ar_16:9,b_auto,c_lpad,dpr_auto,f_auto,g_east,q_auto:best/
-w_1600/v1526606182/wayne-shorter/speak-no-evil/WSHORW12
-```
+`http://res.cloudinary.com/tamas-demo/image/upload/w_1600,ar_16:9,c_lpad,g_west,b_auto,dpr_auto,f_auto,q_auto:best/v1530016018/wallifornia/wiz-khalifa.jpg`
 
 You'll notice we also added a width param: **w\_1600** - You'd set this to fit the image into a explicit layout size, if you omit it you'll get the original image size. The example here were set at a width of 600 to fit nicely in the layout.
 
 Our cover image allready looks awesome, but let add a artistic filter to enhance the black and white image. Adding the effect param with a named filter is how we do it.
 
 ```text
-e_art:red_rock
+e_art:zorro
 ```
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/ar_16:9,b_auto,c_lpad,dpr_auto,f_auto,g_east,q_auto,e_art:red_rock/w_600/v1526606182/wayne-shorter/speak-no-evil/WSHORW12)
+![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_600,ar_16:9,c_lpad,g_west,b_auto,dpr_auto,f_auto,q_auto:best,e_art:zorro/v1530016018/wallifornia/wiz-khalifa.jpg)
 
-Nice vibe! You can almost hear Wayne's smooth jazz sounds. We have dozens of artistic filters, text and image overlays to experiment with and make that cover image pop.
+Nice vibe! You can almost hear Wiz's heavy rapping beats. We have dozens of artistic filters, text and image overlays to experiment with and make that cover image pop.
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/ar_16:9,b_auto,c_lpad,dpr_1.0,e_art:red_rock,g_east,q_auto:best/c_scale,fl_relative,w_0.3,g_west,l_overlays:4194-wayne-shorter-speak-no-evil-mm-cover-1900-ljc,x_0.05,a_-20/c_scale,w_600/wayne-shorter/speak-no-evil/WSHORW12.jpg)
+This looks great so far however the background colour that we have generated stands out a little bit as there’s a seam between the original image and the generated background. We can very easily fix this visual defect by adding a gradient fade to ease the background colour to the main image.
 
-Add some text:
+We can achieve that by adding these parameters to the image:
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/ar_16:9,b_auto,c_lpad,dpr_1.0,e_art:red_rock,g_east,q_auto:best/c_scale,fl_relative,w_0.3,g_west,l_overlays:4194-wayne-shorter-speak-no-evil-mm-cover-1900-ljc,x_0.05,a_-20/l_text:roboto_155_stroke_center_line_spacing_-10:Speak%20No%20Evil,co_white,bo_5px_solid_black,g_north_west,x_400,y_80,w_580,c_fit/l_text:impact_55_stroke_center_line_spacing_-10:Wayne%20Shorter,co_white,bo_5px_solid_red/c_scale,w_600/wayne-shorter/speak-no-evil/WSHORW12.jpg)
+`e_gradient_fade:symmetric_pad,x_50/e_art:zorro/`
 
-```text
-http://res.cloudinary.com/capitol-music-group/image/upload/
-ar_16:9,b_auto,c_lpad,dpr_1.0,e_art:red_rock,g_east,q_auto:best/
-c_scale,fl_relative,w_0.3,g_west,
-l_overlays:4194-wayne-shorter-speak-no-evil-mm-cover-1900-ljc,x_0.05,a_-20/
-l_text:roboto_155_stroke_center_line_spacing_-10:Speak%20No%20Evil,
-co_white,bo_5px_solid_black,g_north_west,x_400,y_80,w_580,c_fit/
-l_text:impact_55_stroke_center_line_spacing_-10:Wayne%20Shorter,co_white,bo_
-5px_solid_white/c_scale,w_600/wayne-shorter/speak-no-evil/WSHORW12.jpg
-```
+![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_600,ar_16:9,c_lpad,g_west,b_auto,dpr_auto,f_auto,q_auto:best,e_gradient_fade:symmetric_pad,x_50/e_art:zorro/v1530016018/wallifornia/wiz-khalifa.jpg)
 
-## Variations
+Notice how the previously added artistic filter is added as a different layer. We are required to specify it this way since the gradient fade will now occupy a layer and we need the artistic filter to be on a different layer in order for it to be visible.
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/w_600/ar_16:9,b_auto,e_gradient_fade:symmetric_pad,x_0.2,c_pad,f_auto,g_east,q_auto/v1526782137/blue-note/wayne-shorter/MI0001444348.jpg.jpg)
+Finally, we are also going to place the logo of the festival in the middle of our newly generated image - this would make a great addition to the image itself.
 
-```text
-http://res.cloudinary.com/capitol-music-group/image/upload/
-ar_16:9,
-b_auto,e_gradient_fade:symmetric_pad,x_0.2,
-c_pad,f_auto,g_east,q_auto/v1526782137/
-blue-note/wayne-shorter/MI0001444348.jpg.jpg
-```
+This is the logo that we’ll be using - it is also loaded as an asset to Cloudinary:  
 
-This variation pulls in the background color and eases in the transition with gradient fade:
 
-```text
-b_auto,e_gradient_fade:symmetric_pad,x_0.2
-```
+![](https://res.cloudinary.com/tamas-demo/image/upload/v1530018414/wallifornia/logo20182x.jpg)
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/w_600/ar_16:9,b_white,e_gradient_fade:symmetric_pad,x_0.2,c_pad,f_auto,g_east,q_auto/v1526782137/blue-note/wayne-shorter/MI0001444348.jpg.jpg)
+Notice that this logo has a white background and a certain size as well, which is a tad too large for our scenario. So it’s not only enough to place the image as an overlay but we need to apply some transformation to this image before we add it as a new layer. We can achieve this by adding the following options:
 
-Here we use the gradient fade to transition the background to white:
+`/e_make_transparent:10,l_wallifornia:logo20182x.jpg,w_140/`
 
-```text
-http://res.cloudinary.com/capitol-music-group/image/upload
-ar_16:9,
-b_white,
-e_gradient_fade:symmetric_pad,x_0.2,c_pad,f_auto,g_east,q_auto/
-v1526782137/blue-note/wayne-shorter/MI0001444348.jpg.jpg
-```
+And here is the final result:
 
-You can also have the that gradient fade into transparency to reveal the background; remember to change the format extension to png.
+![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_600,ar_16:9,c_lpad,g_west,b_auto,dpr_auto,f_auto,q_auto:best,e_gradient_fade:symmetric_pad,x_50/e_make_transparent:10,l_wallifornia:logo20182x.jpg,w_140/e_art:zorro/v1530016018/wallifornia/wiz-khalifa.jpg)
 
-![](http://res.cloudinary.com/capitol-music-group/image/upload/w_600/ar_16:9,b_transparent,e_gradient_fade:symmetric_pad,x_0.2,c_pad,f_auto,g_east,q_auto/v1526782137/blue-note/wayne-shorter/MI0001444348.jpg.png)
+Let's also add some text to this image to display the name of the artist. We can very easily achieve that by adding yet another layer and specify some options \(such as the font family, font size and additional options\):
 
-```text
-http://res.cloudinary.com/capitol-music-group/image/upload/
-ar_16:9,b_transparent,e_gradient_fade:symmetric_pad,x_0.2,
-c_pad,f_auto,g_east,q_auto
-/v1526782137/blue-note/wayne-shorter/MI0001444348.jpg
-.png
-```
+`/l_text:roboto_45:Wiz%20Khalifa,co_black,g_south_east,x_30,y_10,w_600,c_fit/`
 
-Now see how this technique might look on a web page with an interesting background:
+This is how the final result looks like:
 
-![](../.gitbook/assets/assets-lalyutnvnjys_90po7d-ld21yyxlknzpuzstv_y-ld2720vkeppdm9jyaij-transparent-background.png)
+![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_600,ar_16:9,c_lpad,g_west,b_auto,dpr_auto,f_auto,q_auto:best,e_gradient_fade:symmetric_pad,x_50/e_make_transparent:10,l_wallifornia:logo20182x.jpg,w_140/l_text:roboto_45:Wiz%20Khalifa,co_black,g_south_east,x_30,y_10,w_600,c_fit/e_art:zorro/v1530016018/wallifornia/wiz-khalifa.jpg)
 
