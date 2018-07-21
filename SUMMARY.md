@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Hack Midwest Hackathon Guide](README.md)
+* [Challenge and Prizes](cloudinary/challenge-and-prizes.md)
 * [Hack Midwest Website](http://hackmidwest.com/#hackathon)
 
 ## Cloudinary
@@ -19,5 +20,4 @@
 * [Distortion Effects](cloudinary/distortion-effects.md)
 * [Audio to Waveform Images](cloudinary/audio-to-waveform-images.md)
 * [Social and Cloud Sources](cloudinary/social-and-cloud-sources.md)
-* [Challenge and Prizes](cloudinary/challenge-and-prizes.md)
 
