@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Hack Midwest Hackathon Guide](README.md)
-* [Challenge and Prizes](cloudinary/challenge-and-prizes.md)
+* [Challenge and Prizes](challenge-and-prizes.md)
 * [Hack Midwest Website](http://hackmidwest.com/#hackathon)
 
 ## Cloudinary
