@@ -19,3 +19,5 @@
 * [Distortion Effects](cloudinary/distortion-effects.md)
 * [Audio to Waveform Images](cloudinary/audio-to-waveform-images.md)
 * [Social and Cloud Sources](cloudinary/social-and-cloud-sources.md)
+* [Challenge and Prizes](cloudinary/challenge-and-prizes.md)
+

@@ -4,7 +4,7 @@ description: By Dan Zeitman and Miki Shiran
 
 # Build a Cover Image
 
-In this example we'll take a performance image and create a cover image. Here we have the amazing  artist, Wiz Khalifa - image copyright and courtesy of Ardentes Music Festival.
+In this example we'll take a performance image and create a cover image. Here we have the amazing artist, Wiz Khalifa - image copyright and courtesy of Ardentes Music Festival.
 
 ![](http://res.cloudinary.com/tamas-demo/image/upload/c_scale,w_300,dpr_2.0/wallifornia/wiz-khalifa.jpg.png)
 
@@ -68,8 +68,7 @@ Notice how the previously added artistic filter is added as a different layer. W
 
 Finally, we are also going to place the logo of the festival in the middle of our newly generated image - this would make a great addition to the image itself.
 
-This is the logo that we’ll be using - it is also loaded as an asset to Cloudinary:  
-
+This is the logo that we’ll be using - it is also loaded as an asset to Cloudinary:
 
 ![](https://res.cloudinary.com/tamas-demo/image/upload/v1530018414/wallifornia/logo20182x.jpg)
 
